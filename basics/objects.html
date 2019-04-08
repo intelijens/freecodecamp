@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Objects - Basic JavaScript</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+//Build JavaScript Objects
+var myDog = {
+  "name": "Obi",
+  "legs": 6,
+  "tails": 2,
+  "friends": ["Bane", "Mikey", "Tyson"]
+};
+console.table(myDog);
+
+
+// ** Accessing Object Properties with Dot Notation
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+// Only change code below this line
+var hatValue = testObj.hat;      // Change this line
+var shirtValue = testObj.shirt;    // Change this line
+console.log(hatValue);
+console.log(shirtValue);
+
+// ** Accessing Object Properties with Bracket Notation
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+// Only change code below this line
+var entreeValue = testObj["an entree"];   // Change this line
+var drinkValue = testObj["the drink"];    // Change this line
+
+
+
+// ** Accessing Object Properties with Variables
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+// Only change code below this line;
+var playerNumber = 16;       // Change this Line
+var player = testObj[playerNumber];   // Change this Line
+
+
+// ** Updating Object Properties
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.name = "Happy Camper";
+
+// ** Using Objects for Lookups
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line.
+
+myDog.name = "Happy Coder"
+
+// ** Add New Properties to a JavaScript Object
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.bark = "bow-wow";
+
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line.
+myDog.bark = "woff woff"
+
+// ** Delete Properties from a JavaScript Object
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"],
+  "bark": "bow-wow"
+};
+
+delete ourDog.bark;
+
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  // Only change code below this line
+  // switch(val) {
+  //   case "alpha": 
+  //     result = "Adams";
+  //     break;
+  //   case "bravo": 
+  //     result = "Boston";
+  //     break;
+  //   case "charlie": 
+  //     result = "Chicago";
+  //     break;
+  //   case "delta": 
+  //     result = "Denver";
+  //     break;
+  //   case "echo": 
+  //     result = "Easy";
+  //     break;
+  //   case "foxtrot": 
+  //     result = "Frank";
+  // }
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta":"Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  }
+  result = lookup[val]
+
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+phoneticLookup("charlie");
+
+// ** Testing Objects for Properties
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  // Your Code Here
+  if (myObj.hasOwnProperty(checkProp)){
+    return myObj[checkProp]
+  } else {
+    return "Not Found"
+  }
+}
+
+// Test your code by modifying these values
+console.log(checkObj("bui"));
+
+
+// ** Manipulating Complex Objects
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [ 
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  // Add record here
+  {
+    'artist': 'poppy',
+    'title': 'trolls holiday',
+    'release_year': 2018,
+    'formats': [
+      'mp3',
+      'usb'
+    ],
+    'gold': false
+  }
+];
+
+console.table(myMusic)
+
+// ** Accessing Nested Objects
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside['glove box']; // Change this line
+
+console.log(gloveBoxContents)
+
+
+
+// ** Accessing Nested Arrays
+
+// Setup
+var myPlants = [
+  { 
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }  
+];
+
+// Only change code below this line
+
+var secondTree = myPlants[1].list[1]; // Change this line
+console.log(secondTree);
+
+// ** Record Collection
+// Setup
+var collection = {
+    "2548": {
+      "album": "Slippery When Wet",
+      "artist": "Bon Jovi",
+      "tracks": [ 
+        "Let It Rock", 
+        "You Give Love a Bad Name" 
+      ]
+    },
+    "2468": {
+      "album": "1999",
+      "artist": "Prince",
+      "tracks": [ 
+        "1999", 
+        "Little Red Corvette" 
+      ]
+    },
+    "1245": {
+      "artist": "Robert Palmer",
+      "tracks": [ ]
+    },
+    "5439": {
+      "artist": "ABBA",
+      "album": "ABBA Gold"
+    }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// Only change code below this line
+function updateRecords(id, prop, value) {
+  if (collection.hasOwnProperty(id)){
+    //check if has prop
+    if (collection[id].hasOwnProperty(prop)){
+      // check if props is tracks, if so push to array
+      if (prop == 'tracks'){
+        collection[id][prop].push(value)
+      } 
+      // if prop does exist, change the value
+      else{
+        collection[id][prop] = value
+      }
+    }
+    // prop doesn't exist
+    else
+    {
+      // if tracks add empty array and push value 
+      if (prop == 'tracks'){
+        collection[id][prop] = [];
+        collection[id][prop].push(value)
+      } 
+      // add the prop if not tracks and add value to prop
+      else{
+        collection[id][prop] = value;
+      }
+    }
+    //remove props if value param is empty
+    if (value == ''){
+      delete collection[id][prop];
+    }
+    return collection;
+  }
+  // return collection;
+}
+
+// Alter values below to test your code
+console.log(updateRecords(5439, "artist", ""));
+
+
+
+// After updateRecords(5439, "artist", "ABBA"), artist should be "ABBA"
+
+
+
+
+// ** Iterate with JavaScript While Loops
+// ** Iterate with JavaScript For Loops
+// ** Iterate Odd Numbers With a For Loop
+// ** Count Backwards With a For Loop
+// ** Iterate Through an Array with a For Loop
+// ** Nesting For Loops
+// ** Iterate with JavaScript Do...While Loops
+// ** Profile Lookup
+// ** Generate Random Fractions with JavaScript
+// ** Generate Random Whole Numbers with JavaScript
+// ** Generate Random Whole Numbers within a Range
+// ** Use the parseInt Function
+// ** Use the parseInt Function with a Radix
+// ** Use the Conditional (Ternary) Operator
+// ** Use Multiple Conditional (Ternary) Operators
+
+
+
+</script>
+
+
+</html>

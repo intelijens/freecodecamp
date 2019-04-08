@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Strings - Basic JavaScript</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+//Declare String Variables
+var myFirstName = "Mike"
+var myLastName ="Bui"
+
+//Escaping Literal Quotes in Strings
+var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // Change this line
+
+//Quoting Strings with Single Quotes
+var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+
+//Escape Sequences in Strings
+// \'	single quote
+// \"	double quote
+// \\	backslash
+// \n	newline
+// \r	carriage return
+// \t	tab
+// \b	backspace
+// \f	form feed
+
+//FirstLine newline tab backslash SecondLine newline ThirdLine
+var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+
+//Concatenating Strings with Plus Operator
+var myStr = "This is the start. " + "This is the end."
+
+//Concatenating Strings with the Plus Equals Operator
+var myStr = "This is the first sentence. ";
+myStr +=  "This is the second sentence."
+
+//Constructing Strings with Variables
+// Only change code below this line
+var myName = "Mike";
+var myStr = "My name is " + myName + " and I am well!";
+
+//Appending Variables to Strings
+var someAdjective = "dope!";
+var myStr = "Learning to code is ";
+myStr += someAdjective;
+
+//Find the Length of a String
+// Setup
+var lastNameLength = 0;
+var lastName = "Bui";
+
+lastNameLength = lastName.length;
+console.log(lastNameLength);
+
+//Use Bracket Notation to Find the First Character in a String
+var firstLetterOfLastName = "";
+var lastName = "Bui";
+
+// Only change code below this line
+firstLetterOfLastName = lastName[0];
+console.log(firstLetterOfLastName);
+
+//Understand String Immutability
+var myStr = "Jello World";
+
+myStr[0] = "H"; // cannot change the value, immutable
+console.log(myStr);
+myStr = "Hello Bird";
+console.log(myStr);
+
+//Use Bracket Notation to Find the Nth Character in a String
+var lastName = "Lovelace";
+var thirdLetterOfLastName = lastName[2];
+console.log(thirdLetterOfLastName);
+
+//Use Bracket Notation to Find the Last Character in a String
+var lastName = "Lovelace";
+var lastLetterOfLastName = lastName[lastName.length - 1];
+console.log(lastLetterOfLastName);
+
+//Use Bracket Notation to Find the Nth-to-Last Character in a String
+var lastName = "Lovelace";
+var secondToLastLetterOfLastName = lastName[lastName.length - 2];
+console.log(secondToLastLetterOfLastName);
+
+//Word Blanks
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  // Your code below this line
+  var result = "The " + myNoun + " was " + myAdjective + " and he " + myVerb + " up the hill very " + myAdverb + "!";
+
+  // Your code above this line
+  return result;
+}
+
+// Change the words here to test your function
+wordBlanks("dog", "big", "ran", "quickly");
+
+
+
+var nameBui = 'Meta Bui',
+    somethingBui = 143
+
+stringnum = nameBui + somethingBui 
+console.log(stringnum)
+console.log(stringnum.length)
+console.log(stringnum[stringnum.length-5])
+
+
+</script>
+
+
+</html>
